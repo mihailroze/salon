@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Приветственное сообщение -->
+    <div class="text-center py-5" style="background-color: #ffe6f0;">
+        <h1 class="display-4 fade-in">Добро пожаловать в наш маникюрный салон!</h1>
+        <p class="lead fade-in">Мы предлагаем профессиональный маникюр, педикюр и наращивание ногтей. Доверьте свои руки нашим мастерам!</p>
+    </div>
+
+    <!-- Кнопки быстрого доступа -->
+    <div class="text-center my-4">
+        <a href="{{ url_for('add_appointment') }}" class="btn btn-primary btn-lg me-3">Записаться на услугу</a>
+    </div>
+
+    <!-- Цены на услуги -->
+    <div class="my-5">
+        <h2 class="text-center">Наши услуги и цены</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-item">
+                    <h4>Маникюр</h4>
+                    <p class="description">Классический или комбинированный маникюр с покрытием</p>
+                    <p class="price">1500 руб.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item">
+                    <h4>Педикюр</h4>
+                    <p class="description">Полный уход за ногами с покрытием</p>
+                    <p class="price">2000 руб.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item">
+                    <h4>Наращивание ногтей</h4>
+                    <p class="description">Гелевое наращивание с дизайном</p>
+                    <p class="price">3000 руб.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Галерея работ -->
+    <div class="my-5">
+        <h2 class="text-center">Наши работы</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="static/images/manik.jpg" class="img-fluid rounded" alt="Маникюр">
+                    <p class="text-center mt-2">Маникюр</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="static/images/ped.jpg" class="img-fluid rounded" alt="Педикюр">
+                    <p class="text-center mt-2">Педикюр</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gallery-item">
+                    <img src="static/images/nar.jpg" class="img-fluid rounded" alt="Наращивание">
+                    <p class="text-center mt-2">Наращивание ногтей</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Информация о салоне -->
+    <div class="row my-5">
+        <div class="col-md-6">
+            <h3>Контактная информация</h3>
+            <p><strong>Адрес:</strong> ул. Примерная, 123, г. Примерный</p>
+            <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+            <p><strong>Email:</strong> info@salon.ru</p>
+        </div>
+        <div class="col-md-6">
+            <h3>Часы работы</h3>
+            <p><strong>Пн - Пт:</strong> 9:00 - 20:00</p>
+            <p><strong>Суббота:</strong> 10:00 - 18:00</p>
+            <p><strong>Воскресенье:</strong> Выходной</p>
+        </div>
+    </div>
+{% endblock %}

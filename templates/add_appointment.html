@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Запись на услугу</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.client_name.label(class="form-label") }}
+            {{ form.client_name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.service.label(class="form-label") }}
+            {{ form.service(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.appointment_date.label(class="form-label") }}
+            {{ form.appointment_date(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.appointment_time.label(class="form-label") }}
+            {{ form.appointment_time(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+{% endblock %}
